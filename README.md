@@ -7,7 +7,7 @@ Frontend Web Framework: Bootstrap4
 
 Backend Web Framework : Django2
 
-Project contains one sub app named as blog
+Project contains one sub app named as <b>blog</b>
 
 
 You can visit this link [http://blogpadncolin.herokuapp.com] for live view of this web app
