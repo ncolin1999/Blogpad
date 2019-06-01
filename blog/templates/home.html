@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}
+    BlogPad
+{% endblock %}
+
+{% block content %}
+    <div class="row mb-3">
+        <div class="col-10 ">
+            <form class="form-inline" action="{% url 'index' %}" method="get">
+                <input class="form-control w-50" type="search" name="search" placeholder="Search">
+                <input type="submit" value="Search" class="btn btn-dark ml-2">
+            </form>
+        </div>
+        <div class="col-2 text-right">
+            <a class="btn btn-primary" href="new/">New Post</a>
+        </div>
+
+    </div>
+
+
+    <div id="home-container" class="row pt-3 rounded-lg mb-5 shadow-lg border-secondary mx-0">
+        {% for post in posts %}
+            <div class="col-md-6 col-lg-4 mb-3">
+                <div class="card bg-dark">
+                    <img src="{{ post.image.url }}/" class="card-img-top" height="200rem" alt="....">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold text-light">{{ post.title }}</h5>
+                        <p class="card-text text-light">{{ post.summary }}</p>
+                        <a href="{{ post.id }}/" class="btn btn-primary">More</a>
+
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <ul>
+    </ul>
+
+{% endblock %}

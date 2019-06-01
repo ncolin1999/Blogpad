@@ -1,0 +1,51 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    background: #D3CCE3; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+#base-container {
+    margin-top: 5rem;
+}
+
+
+#home-container {
+    background: #00d2ff; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #928DAB, #00d2ff); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #928DAB, #00d2ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#foot {
+    text-align: center;
+}
+
+
+#Logo {
+    font-size: 1.5rem;
+}
+
+#comment-section{
+    margin-bottom: 9rem;
+}
+
+.img-fluid {
+    height: 500px;
+    width: 100%;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+}
+
+
+
+
+

@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block title %}
+    Show Post
+{% endblock %}
+
+{% block content %}
+    <div class="border border-secondary shadow-lg bg-light p-3 rounded-lg mb-5">
+        <div class="row">
+            <div class="col-12 mb-2">
+                <img src="{{ post.image.url }}" class="img-fluid">
+            </div>
+            <div class="col-12 my-2">
+                <div class="row">
+                    <div class="col-6 text-left">
+                        <h1>{{ post.title }} </h1>
+                    </div>
+                    <div class="col-6 text-right">
+                        <h5>Last modified on {{ post.pub_date }} </h5>
+                        <h6>by {{ post.author.username }}</h6>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12">
+                <p>{{ post.description }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="comment-section" class="shadow-lg rounded-lg px-2 pb-5">
+        <h1>Please Comment</h1>
+        <form action="{% url 'comment' post.id %}" method="GET">
+            {% csrf_token %}
+            <div class="form-group">
+                <input class="form-control" type="text" required placeholder="Name" name="name">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="email" required placeholder="Email address" name="email">
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" required rows="10" name="message"
+                          placeholder="Write your message"></textarea>
+            </div>
+            <input type="submit" value="Submit" class="btn btn-secondary float-right">
+
+        </form>
+    </div>
+
+{% endblock %}
