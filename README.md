@@ -10,7 +10,7 @@ Backend Web Framework : Django2
 Project contains one sub app named as <b>blog</b>
 
 
-You can visit this link [http://blogpadncolin.herokuapp.com] for live view of this web app
+You can visit this <a href="http://blogpadncolin.herokuapp.com">link</a> for live view of this web app
 
 
 
